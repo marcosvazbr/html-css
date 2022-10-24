@@ -1,0 +1,40 @@
+@charset "UTF-8"
+
+*{
+    height: 100%
+}
+body{
+    background-image: linear-gradient(to top, #5A0F94, #8101E0 );
+}
+main{
+    background-color: white;
+    width: 600px;
+    padding: 50px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #240a52b6;
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+  color: #5A0F94; 
+  text-align: center;
+  text-shadow: 1px 1px 2px #240a526e ;
+}
+h2{
+    color: #5A0F94;
+    text-shadow: 1px 1px 2px #27073f96;
+
+}
+p{
+    text-align: justify;
+    color: rgb(34, 33, 33);
+
+}
+button{
+    background-image: linear-gradient(to top, #E09516, #fdaa1a);
+    color: white;
+    border: #E09516;
+    font-size: large;
+    box-shadow: 1px 1px 2px  #8d5e0e;
+    object-position: center;
+}
