@@ -13,18 +13,40 @@
         table {
             width: 400px;
             border-collapse: collapse;
+            position: relative;
         }
-
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(194, 190, 190);
+            border-radius: 10px 10px 0px 0px;
+        }
         td, th {
             border: 1px solid black;
             text-align: center;
             padding: 10px;
         }
 
+        thead > tr > th { 
+            /* Efeito para o cabeçalho se mover junto com a tabela. tem que colocar position relative no table */
+
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
         thead, tfoot {
             background-color: grey;
             color: white;
         }
+        tbody > tr:nth-child(odd) { /* nth-child colocar css pulandos linhas, dentro dos () coloca a quantidade de linhas(pode escrever par ou impar no () também odd=par even=par */
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(even) {
+            background-color: red;
+        }
+        
     </style>
 </head>
 <body>
@@ -32,6 +54,8 @@
     <!--
         Hierarquia de tabelas(simples)
         table = tabela
+            caption
+                legenda da tabela (só texto)
             thead
                 tr, td, th
             tbody
@@ -42,19 +66,47 @@
             table row = linha de tabela (tr)
                 table header = cabeçalho de tabela
                 table data = datos de tabela (td)
-    -->
+                th = título
+                td = dados
+
+            -->
 
     <table>
+        <caption>População por Estado.</caption>
         <thead>
             <tr>
-                <th>ESTADO</th>
-                <th>POPULAÇÃO</th>
+                <th scope="col">ESTADO</th>
+                <th scope="col" style="width: 50px;">POPULAÇÃO</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
                 <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td>3.919.049</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td>5.099.159</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td>4.582.057</td>
+            </tr>
+            <tr>
+                <td>Espirito Santo</td>
+                <td>5.099.159</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td>5.099.159</td>
+            </tr>
+            <tr>
+                <td>Maceio</td>
+                <td>8.099.159</td>
             </tr>
             <tr>
                 <td>Minas Gerais</td>
@@ -83,13 +135,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td><strong>213.152.584</strong></td>
                 
             </tr>
         </tfoot>
     </table>
-
-    
 </body>
 </html>
