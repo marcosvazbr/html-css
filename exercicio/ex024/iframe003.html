@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uso de iframe</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+        }
+    </style>
+</head>
+<body><h1>Faça uma escolha</h1>
+<p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi esse nemo quo accusantium dicta ea necessitatibus distinctio facilis. Laborum explicabo corrupti expedita odit eaque accusantium, debitis atque officiis voluptas?</span><span>Ipsum, eligendi? Vitae neque quisquam veritatis fugit ipsum delectus unde mollitia doloremque aliquam non quidem repellat incidunt qui, animi quibusdam dolor optio? Quaerat numquam sequi optio accusantium dolorem nostrum ea.</span></p>
+
+<ul>
+    <!--target para informar onde irá abrir, colocar o nome dado para "name" no iframe, ai abrirá somente dentro do iframe-->
+    <li><a href="paginas/pagina001.html" target="frame">Primeira Página</a></li>
+    <li><a href="paginas/pagina002.html" target="frame">Segunda Página</a></li>
+    <li><a href="paginas/pagina003.html" target="frame">Terceira Página</a></li>
+</ul>
+
+<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum molestias temporibus veritatis beatae aspernatur esse et dolore delectus debitis nostrum exercitationem sequi fugit expedita perspiciatis rem a fugiat, quo unde.</span><span>Maxime neque dolor ipsum impedit iste eos sapiente ipsam in molestias voluptate debitis necessitatibus alias iusto voluptatum quaerat rerum, cumque dolore non maiores architecto excepturi ducimus recusandae minima deserunt! Error.</span></p>
+<!-- name para o target do link, ai abrirá somente no iframe-->
+    <iframe name="frame" srcdoc="<h1>Escolha uma das opções</h1> <p>pode colocar imagem e outros itens do html</p> <p>Quando tiver aspas, tem colocar aspas simples pois já está na aspas duplas</p>" </iframe> frameborder="1"></iframe>
+
+    <!-- srcdoc="" é usado para colocar conteúdo html no lugar de link, pode usar até imagens e outras tags-->
+
+    <p><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui nisi sint neque totam quidem modi similique? Excepturi vel minima praesentium, quam saepe earum quae suscipit ducimus cupiditate aliquam, laudantium repellendus!</span><span>Esse necessitatibus at odio amet facere ea magnam modi laborum neque! Debitis quod culpa inventore officia numquam aperiam, deserunt perferendis voluptas consequuntur amet expedita nihil ullam, quidem dolores alias quisquam.</span></p>
+</body>
+</html>
