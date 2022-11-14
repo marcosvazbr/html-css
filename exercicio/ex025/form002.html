@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+
+    <!-- para o campo ser obrigatório use o REQUIRED 
+
+        MINLENGTH = quantidade mínima de caracteres
+        MAXLENGTH = quantidade máxima de caracteres
+        SIZE = quantos caracteres caberá na caixa sem esconder
+        PLACEHOLDER = colocar dicas na caixa
+        AUTOCOMLETE = coloca no FORM e depois coloca qual tipo de dado no INPUT.
+    
+    
+    
+    -->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="iusuario">Usuário:</label>
+            <input type="text" name="usuario" id="iusuario" required minlength="5" maxlength="10" size="20" placeholder="nome do usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isenha">Senha:</label>
+            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" autocomplete="new-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
