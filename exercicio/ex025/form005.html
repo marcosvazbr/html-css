@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulários</h1>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Sexo</legend> <!--Colocar o mesmo name para as opções, assim você poderá escolher somente uma delas, não precisa ser o mesmo id. Se não colocar o menos NAME você poderá escolher todos.
+            
+
+                CHECKED = já irá aparecer marcado por padrão.
+            -->
+            <legend>Sexo</legend>
+                <label for="isexom"><input type="radio" name="sexo" id="isexom"> Masculino</label>
+                <label for="isexof"><input type="radio" name="sexo" id="isexof" checked> Feminino</label>
+        </fieldset>        
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+                <label for="iesfut"><input type="checkbox" name="esfut" id="iesfut"> Futebol <br></label>
+                <label for="iesvol"><input type="checkbox" name="esvol" id="iesvol"> Volei <br></label>
+                <label for="iesnat"><input type="checkbox" name="esnat" id="iesnat"> Natação <br></label>
+                <label for="ieslut"><input type="checkbox" name="eslut" id="ieslut"> Luta</label>
+        </fieldset>
+            
+        
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    
+</body>
+</html>
