@@ -10,7 +10,67 @@
     <h1>Exemplos de formulários</h1>
     <h2>Sem a tag input.</h2>
 
-    <form action="" method="get"></form>
+    <form action="cadastro.php" method="get">
+        <p> 
+
+
+
+            <!--
+                SELECT = para criar um formulário de lista.
+                OPTION = para acrescentar cada item da lista.
+                OPTGROUP + LABEL =  para criar grupos na lista.
+                SELECTED = para já vir selecionado por padrão.
+
+            -->
+            <label for="iest">Estado:</label>
+            <select name="est" id="iest">
+                <option value="" selected>Escolha</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Cataria</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <!--
+                DATALIST = para criar uma lista de opções no input:text
+                tem que dar um id para o datalist e vincular ele com a tag LIST no input.
+                As opções que irão aparecer deverão ser acrescentada com option.
+            -->
+            <label for="iprof">Profissão:</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option value="con">Contabilista</option>
+                <option value="prof">Professor</option>
+                <option value="Pol">Policial</option>
+            </datalist>
+
+        </p>
+
+        <p>
+            <!--
+                TEXTAREA = digitar uma mensagem, sem limite
+                cols = quantas colunas irá aparecer
+                rows = quantas linhas irá aparecer 
+                recomendado colocar formulário com método post
+            -->
+            <label for="imsg">Mensagem:</label>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Escreva sua mensagem:"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
     
 </body>
 </html>
