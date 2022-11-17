@@ -17,6 +17,7 @@ header {
 
 header > h1 {
     text-align: center;
+
 }
 
 menu li {
@@ -28,4 +29,11 @@ article {
     width: 600px;
     margin: auto;
     
+}
+main > article > h2 {
+    padding: 20px;
+}
+
+main > article > p {
+    padding: 10px;
 }
